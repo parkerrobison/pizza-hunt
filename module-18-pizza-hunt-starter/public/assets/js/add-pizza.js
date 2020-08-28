@@ -66,6 +66,9 @@ const handlePizzaSubmit = event => {
   })
   .catch(err => {
     console.log(err);
+    // this function comes from the idb.js file. 
+    // And will save the data to the db if there is no internet connection
+    saveRecord(formData);
   });
 };
 
